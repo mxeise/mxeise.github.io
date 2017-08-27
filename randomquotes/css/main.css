@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro');
+
+.quote {
+  font-family: 'Source Serif Pro';
+  font-size: 22px;
+  line-height: 30px;
+
+  padding: 1em 0em 0em 0em;
+}
+
+.quote_by {
+  font-family: 'Source Serif Pro';
+  font-size: 20px;
+  padding-bottom: 1em;
+}
+
+.quote-btn {
+  align-items: : right !important;
+}
+
+.fa.fa-twitter {
+  color: #1da1f2;
+}
+
+.nav-link {
+  color: #fff !important;
+}
+
+.nav-link:hover {
+  border-bottom-color: #fff !important;
+}
