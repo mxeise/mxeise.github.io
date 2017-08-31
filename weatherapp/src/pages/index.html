@@ -1,0 +1,52 @@
+---
+title: The Weather App
+---
+
+<div class="site_wrapper">
+  <div class="wrapper">
+    <div class="row align-middle">
+      <div class="column align-self-middle">
+        <!-- begin -->
+
+          <div class="row">
+            <div class="small-12 columns">
+              <h1 class="text-center">The Weather App</h1>
+            </div>
+          </div>
+
+          <div class="row align-center">
+            <div class="small-6 columns">
+              <div id="loading" class="loading_wrapper">
+                {{> loading_animation}}
+              </div>
+            </div>
+          </div>
+
+          <div class="app">
+            <div class="row align-center">
+                {{> weather_icons}}
+            </div>
+            <div class="row align-center">
+              <div class="small-6 columns">
+                <p id="weather_description" class="lead text-center"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row align-center">
+            <div class="small-12 large-8 columns">
+              <span id="weather_facts">
+                <p class="lead description text-center">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;Location:&nbsp;<span id="city"></span>&nbsp;
+                  <br /><i class="fa fa-thermometer-full" aria-hidden="true"></i>&nbsp;Temperature:&nbsp;<span id="temperature"></span>°
+                  <br /><i class="fa fa-leaf" aria-hidden="true"></i>&nbsp;Windspeed:&nbsp;<span id="windspeed"></span>
+                </p>
+              </span>
+            </div>
+          </div>
+
+        <!-- end -->
+      </div>
+    </div>
+  </div>
+</div>
