@@ -19,6 +19,7 @@ var latitue = 0;
 var longitude = 0;
 var condition = 0;
 
+const secure = "https://cors-anywhere.herokuapp.com/";
 const appid = "9d2edcd891bf9465d03dd7e31cf9c1e2";
 const unit = "&units=metric";
 const lang = "&lang=de";
@@ -49,7 +50,7 @@ function logPosition(position) {
 }
 
 function getWeather(lat, lon) {
-    $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + unit + lang + "&appid=" + appid, function(response) {
+    $.getJSON(secure + "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + unit + lang + "&appid=" + appid, function(response) {
       //$("#response").text(response);
       console.log(response);
       condition = response.weather[0].id;
