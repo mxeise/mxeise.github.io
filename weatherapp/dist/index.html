@@ -1,0 +1,118 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Weather App</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  </head>
+  <body>
+
+    
+    <div class="site_wrapper">
+      <div class="wrapper">
+        <div class="row align-middle">
+          <div class="column align-self-middle">
+            <!-- begin -->
+    
+              <div class="row">
+                <div class="small-12 columns">
+                  <h1 class="text-center">The Weather App</h1>
+                </div>
+              </div>
+    
+              <div class="row align-center">
+                <div class="small-6 columns">
+                  <div id="loading" class="loading_wrapper">
+                    <div class="loader">
+                      <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                      <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+                        <animateTransform attributeType="xml"
+                          attributeName="transform"
+                          type="rotate"
+                          from="0 25 25"
+                          to="360 25 25"
+                          dur="0.6s"
+                          repeatCount="indefinite"/>
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="app">
+                <div class="row align-center">
+                    <div class="icon sun-shower">
+                      <div class="cloud"></div>
+                      <div class="sun">
+                        <div class="rays"></div>
+                      </div>
+                      <div class="rain"></div>
+                    </div>
+                    
+                    <div class="icon thunder-storm">
+                      <div class="cloud"></div>
+                      <div class="lightning">
+                        <div class="bolt"></div>
+                        <div class="bolt"></div>
+                      </div>
+                    </div>
+                    
+                    <div class="icon cloudy">
+                      <div class="cloud"></div>
+                      <div class="cloud"></div>
+                    </div>
+                    
+                    <div class="icon flurries">
+                      <div class="cloud"></div>
+                      <div class="snow">
+                        <div class="flake"></div>
+                        <div class="flake"></div>
+                      </div>
+                    </div>
+                    
+                    <div class="icon sunny">
+                      <div class="sun">
+                        <div class="rays"></div>
+                      </div>
+                    </div>
+                    
+                    <div class="icon rainy">
+                      <div class="cloud"></div>
+                      <div class="rain"></div>
+                    </div>
+                </div>
+                <div class="row align-center">
+                  <div class="small-6 columns">
+                    <p id="weather_description" class="lead text-center"></p>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="row align-center">
+                <div class="small-12 large-8 columns">
+                  <span id="weather_facts">
+                    <p class="lead description text-center">
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;Location:&nbsp;<span id="city"></span>&nbsp;
+                      <br /><i class="fa fa-thermometer-full" aria-hidden="true"></i>&nbsp;Temperature:&nbsp;<span id="temperature"></span>°
+                      <br /><i class="fa fa-leaf" aria-hidden="true"></i>&nbsp;Windspeed:&nbsp;<span id="windspeed"></span>
+                    </p>
+                  </span>
+                </div>
+              </div>
+    
+            <!-- end -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
