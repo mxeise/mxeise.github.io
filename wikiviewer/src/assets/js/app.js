@@ -15,7 +15,9 @@ $(document).foundation();
 
 window.onload = function () {
 
-  var api = 'https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=';
+  var cors = 'https://cors-anywhere.herokuapp.com/'
+
+  var api = 'http://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&gsrnamespace=0&gsrlimit=10&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=';
   var cb = '&callback=JSON_CALLBACK';
   var page = 'https://en.wikipedia.org/?curid=';
 
@@ -23,8 +25,12 @@ window.onload = function () {
   $(function() {
     $('form').submit(function() {
       var search = $('#search_input').val();
-      $.getJSON(api + search, function(results) {
-        console.log(result);
+      $.getJSON(cors + api + search, function(results) {
+        $('#results').empty();
+        console.log(results);
+        $.each(results.query.pages, function(i, value) {
+          $('#results').append('<div id="result_spacing" class="row align-center"><div class="large-8 columns"><div class="callout"><h4>' + value.title + '</h4>' + '<p>' + value.extract + '</p>' + '</div></div>');
+        });
       });
       return false;
     });

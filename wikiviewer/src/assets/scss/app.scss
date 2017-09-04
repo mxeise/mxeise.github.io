@@ -7,10 +7,10 @@
 
 
 @include foundation-global-styles;
-// @include foundation-grid;
-// @include foundation-flex-grid;
+@include foundation-grid;
+@include foundation-flex-grid;
 //
-@include foundation-xy-grid-classes;
+// @include foundation-xy-grid-classes;
 @include foundation-typography;
 @include foundation-button;
 // @include foundation-forms;
@@ -56,6 +56,10 @@
 
 $background: #EFE8D8;
 
+html, body {
+  background: $background;
+}
+
 .wrapper {
   color: $primary-color;
   background: $background;
@@ -71,6 +75,53 @@ $background: #EFE8D8;
   padding-top: 4em;
 
   h1 {
-    font-size: 70px;
+    font-size: 60px;
+  }
+}
+
+.app {
+
+  .random_button {
+    padding-top: 1.5em;
+  }
+
+  .button {
+    position: relative;
+    margin: 0 auto;
+
+    border-width: 0.1rem;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    &:hover {
+      color: $white;
+      background-color: $primary-color;
+      border-color: $primary-color;
+      transition: .8s all;
+      -webkit-transition: .8s all;
+    }
+  }
+}
+
+.result {
+  position: relative;
+  padding-top: 5em;
+
+  #result_spacing {
+    padding: 1em 0em 1em 0em !important;
+  }
+
+  .callout {
+    margin: 0 auto;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+      border-color: $primary-color;
+
+      transition: .8s all;
+      -webkit-transition: .8s all;
+      //border-color: darken($primary-color, 30%);
+    }
   }
 }
